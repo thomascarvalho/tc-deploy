@@ -49,6 +49,42 @@ export function postRender(ctx: RenderContext) {
         content: "width=device-width, initial-scale=1.0",
       })
     );
+
+    ctx.head.push(
+      h("link", {
+        rel: "icon",
+        type: "image/png",
+        content:
+          "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/android-chrome-192x192.png",
+      })
+    );
+
+    ctx.head.push(
+      h("link", {
+        rel: "apple-touch-icon",
+        sizes: "192x192",
+        content:
+          "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/apple-touch-icon.png",
+      })
+    );
+
+    ctx.head.push(
+      h("link", {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        content:
+          "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/favicon-32x32.png",
+      })
+    );
+
+    ctx.head.push(
+      h("link", {
+        rel: "manifest",
+        href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/site.webmanifest",
+      })
+    );
+
     ctx.head.push(
       h("link", { rel: "preconnect", href: "https://fonts.gstatic.com" })
     );
