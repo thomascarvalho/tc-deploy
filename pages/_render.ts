@@ -1,5 +1,3 @@
-// This module adds twind support.
-
 import {
   getStyleTagProperties,
   virtualSheet,
@@ -41,82 +39,54 @@ export function postRender(ctx: RenderContext) {
     sheet.reset(snapshot);
     const { id, textContent } = getStyleTagProperties(sheet);
 
-    ctx.head.push(h("title", null, "Thomas Carvalho"));
-    ctx.head.push(h("meta", { charset: "UTF-8" }));
     ctx.head.push(
+      h("title", null, "Thomas Carvalho"),
+      h("meta", { charset: "UTF-8" }),
       h("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1.0",
-      })
-    );
-
-    ctx.head.push(
+      }),
       h("link", {
         rel: "icon",
         type: "image/png",
-        content:
-          "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/android-chrome-192x192.png",
-      })
-    );
-
-    ctx.head.push(
+        href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/android-chrome-192x192.png",
+      }),
       h("link", {
         rel: "apple-touch-icon",
         sizes: "192x192",
-        content:
-          "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/apple-touch-icon.png",
-      })
-    );
-
-    ctx.head.push(
+        href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/apple-touch-icon.png",
+      }),
       h("link", {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        content:
-          "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/favicon-32x32.png",
-      })
-    );
-
-    ctx.head.push(
+        href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/favicon-32x32.png",
+      }),
       h("link", {
         rel: "manifest",
         href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/site.webmanifest",
-      })
-    );
-
-    ctx.head.push(
-      h("link", { rel: "preconnect", href: "https://fonts.gstatic.com" })
-    );
-
-    ctx.head.push(
+      }),
+      h("link", { rel: "preconnect", href: "https://fonts.gstatic.com" }),
       h("link", {
         href: "https://fonts.googleapis.com/css2?family=Nunito&display=swap",
         rel: "stylesheet",
-      })
-    );
-
-    ctx.head.push(
+      }),
       h("script", {
         type: "text/javascript",
         dangerouslySetInnerHTML: {
           __html: `
-      try {
-var mode = localStorage.getItem("theme");
-var supportDarkMode =
-  window.matchMedia("(prefers-color-scheme: dark)").matches === true;
-if (!mode && supportDarkMode) document.documentElement.classList.add("dark");
-if (mode) {
-  document.documentElement.classList.add(mode);
-}
-} catch (e) {
-console.error(e);
-}`,
+          try {
+            var mode = localStorage.getItem("theme");
+            var supportDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches === true;
+            if (!mode && supportDarkMode) document.documentElement.classList.add("dark");
+            if (mode) {
+              document.documentElement.classList.add(mode);
+            }
+          } catch (e) {
+            console.error(e);
+          }`,
         },
-      })
-    );
-
-    ctx.head.push(
+      }),
       h("style", { id, dangerouslySetInnerHTML: { __html: textContent } })
     );
   }

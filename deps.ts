@@ -2,6 +2,7 @@ export * from "https://raw.githubusercontent.com/lucacasonato/fresh/main/runtime
 import { IS_BROWSER } from "https://raw.githubusercontent.com/lucacasonato/fresh/main/runtime.ts";
 import { setup, tw } from "https://esm.sh/twind";
 export { setup, tw };
+
 if (IS_BROWSER) {
   setup({
     preflight: true,
@@ -20,6 +21,7 @@ if (IS_BROWSER) {
     },
   });
 }
+
 export const AVATAR_URL =
   "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/avatar.jpg";
 declare namespace JSX {
