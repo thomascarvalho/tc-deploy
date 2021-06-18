@@ -41,6 +41,7 @@ export function postRender(ctx: RenderContext) {
     sheet.reset(snapshot);
     const { id, textContent } = getStyleTagProperties(sheet);
 
+    ctx.head.push(h("title", null, "Thomas Carvalho"));
     ctx.head.push(h("meta", { charset: "UTF-8" }));
     ctx.head.push(
       h("meta", {

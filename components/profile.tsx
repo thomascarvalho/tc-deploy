@@ -62,15 +62,15 @@ export const Profile = () => {
             Berry, France
           </a>
         </p>
-        <p className={tw`pt-8 text-sm`}>
+        <p className={tw`pt-12 text-sm pb-12`}>
           Développeur curieux, passionné et agile.
         </p>
 
-        <div className={tw`pt-12 pb-8`}>
+        {/* <div className={tw`pt-12 pb-8`}>
           <a href="/blog" className={tw`${buttonStyledClassName}`}>
             Blog
           </a>
-        </div>
+        </div> */}
 
         <div
           className={tw`mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-center`}
