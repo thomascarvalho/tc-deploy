@@ -1,5 +1,11 @@
-import { h, useState, useEffect, createContext, VNode } from "../deps.ts";
-// const mythemeStore = new Store("", "theme", "local");
+import {
+  h,
+  useState,
+  IS_BROWSER,
+  useEffect,
+  createContext,
+  VNode,
+} from "../deps.ts";
 
 export const ThemeContext = createContext<{
   theme: string | undefined;
@@ -7,19 +13,20 @@ export const ThemeContext = createContext<{
 }>({ theme: undefined, toggleTheme: () => {} });
 
 export const ThemeProvider = ({ children }: { children: VNode }) => {
-  const [theme, setTheme] = useState<string>("");
+  const [theme, setTheme] = useState<string>(
+    IS_BROWSER ? (localStorage.getItem("theme") as string) : ""
+  );
 
   const changeTheme = (
     newTheme: string,
     oldTheme: string | undefined = "light"
   ) => {
-    // @ts-ignore fake
     document.documentElement.classList.remove(oldTheme);
-    // @ts-ignore fake
     document.documentElement.classList.add(newTheme);
     setTheme(newTheme);
-    /* this.store.setState(newTheme);
-    this.update();*/
+    if (IS_BROWSER) {
+      localStorage.setItem("theme", newTheme);
+    }
   };
 
   const toggleTheme = () => {

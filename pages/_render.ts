@@ -60,6 +60,26 @@ export function postRender(ctx: RenderContext) {
     );
 
     ctx.head.push(
+      h("script", {
+        type: "text/javascript",
+        dangerouslySetInnerHTML: {
+          __html: `
+      try {
+var mode = localStorage.getItem("theme");
+var supportDarkMode =
+  window.matchMedia("(prefers-color-scheme: dark)").matches === true;
+if (!mode && supportDarkMode) document.documentElement.classList.add("dark");
+if (mode) {
+  document.documentElement.classList.add(mode);
+}
+} catch (e) {
+console.error(e);
+}`,
+        },
+      })
+    );
+
+    ctx.head.push(
       h("style", { id, dangerouslySetInnerHTML: { __html: textContent } })
     );
   }
