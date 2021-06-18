@@ -2,7 +2,7 @@ import {
   getStyleTagProperties,
   virtualSheet,
 } from "https://esm.sh/twind/sheets";
-import { h, setup } from "../deps.ts";
+import { h, setup, STATIC_URL } from "../deps.ts";
 import { RenderContext, RenderFn } from "../server_deps.ts";
 
 const sheet = virtualSheet();
@@ -49,22 +49,22 @@ export function postRender(ctx: RenderContext) {
       h("link", {
         rel: "icon",
         type: "image/png",
-        href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/android-chrome-192x192.png",
+        href: `${STATIC_URL}/android-chrome-192x192.png`,
       }),
       h("link", {
         rel: "apple-touch-icon",
         sizes: "192x192",
-        href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/apple-touch-icon.png",
+        href: `${STATIC_URL}/apple-touch-icon.png`,
       }),
       h("link", {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/favicon-32x32.png",
+        href: `${STATIC_URL}/favicon-32x32.png`,
       }),
       h("link", {
         rel: "manifest",
-        href: "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/site.webmanifest",
+        href: `${STATIC_URL}/site.webmanifest`,
       }),
       h("link", { rel: "preconnect", href: "https://fonts.gstatic.com" }),
       h("link", {

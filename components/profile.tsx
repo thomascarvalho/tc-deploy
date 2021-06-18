@@ -1,4 +1,4 @@
-import { h, VNode, tw, AVATAR_URL } from "../deps.ts";
+import { h, VNode, tw, STATIC_URL } from "../deps.ts";
 
 import { ToggleTheme } from "./toggle-theme.tsx";
 import {
@@ -37,7 +37,7 @@ export const Profile = () => {
       <div className={tw`p-12 text-center flex-grow lg:text-left`}>
         <div
           className={tw`block lg:hidden rounded-full shadow-xl mx-auto h-48 w-48 bg-cover bg-center`}
-          style={`background-image: url('${AVATAR_URL}')`}
+          style={`background-image: url('${STATIC_URL}/avatar.jpg')`}
         ></div>
 
         <h1 className={tw`text-3xl font-bold pt-8 lg:pt-0`}>Thomas Carvalho</h1>
@@ -106,7 +106,7 @@ export const Profile = () => {
         </div>
         <div className={tw`flex justify-end`}>
           <img
-            src={AVATAR_URL}
+            src={`${STATIC_URL}/avatar.jpg`}
             className={tw`rounded-none hidden lg:rounded-tl-lg lg:rounded-br-lg shadow-2xl lg:block`}
           />
         </div>
