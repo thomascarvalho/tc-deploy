@@ -87,6 +87,21 @@ export function postRender(ctx: RenderContext) {
           }`,
         },
       }),
+      h("script", {
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=UA-139850162-1",
+      }),
+      h("script", {
+        type: "text/javascript",
+        dangerouslySetInnerHTML: {
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-139850162-1');
+          `,
+        },
+      }),
       h("style", { id, dangerouslySetInnerHTML: { __html: textContent } })
     );
   }
