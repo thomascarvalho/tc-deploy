@@ -21,7 +21,7 @@ if (IS_BROWSER) {
   });
 }
 export const AVATAR_URL =
-  "https://github.com/thomascarvalho/tc-deploy/blob/main/static/avatar.jpg";
+  "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static/avatar.jpg";
 declare namespace JSX {
   interface IntrinsicElements {
     [keyName: string]: any;
