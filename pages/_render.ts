@@ -11,6 +11,7 @@ setup({
   preflight: true,
   sheet,
   darkMode: "class",
+  mode: "silent",
   theme: {
     fontFamily: {
       sans: ["Nunito", "sans-serif"],

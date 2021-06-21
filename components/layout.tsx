@@ -1,4 +1,4 @@
-import { h, tw, VNode } from "../deps.ts";
+import { h, tw, Fragment, VNode } from "../deps.ts";
 import { ThemeProvider } from "./theme-provider.tsx";
 
 type LayoutProps = {
@@ -9,11 +9,15 @@ type LayoutProps = {
 export const Layout = ({ children, title }: LayoutProps) => {
   return (
     <ThemeProvider>
-      <div
-        className={tw`max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto py-4 lg:py-0`}
+      <main
+        className={tw`font-sans min-h-screen antialiased text-gray-900 leading-normal tracking-wider transition-colors bg-yellow-50 dark:bg-gray-800 area`}
       >
-        {children}
-      </div>
+        <div
+          className={tw`max-w-4xl flex h-screen items-center h-auto lg:h-screen flex-wrap mx-auto py-4 lg:py-0`}
+        >
+          {children}
+        </div>
+      </main>
     </ThemeProvider>
   );
 };
