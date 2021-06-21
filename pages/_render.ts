@@ -103,7 +103,7 @@ export function postRender(ctx: RenderContext) {
           `,
         },
       }),
-      h("style", { id, dangerouslySetInnerHTML: { __html: textContent } })
+      h("style", { id, dangerouslySetInnerHTML: { __html: textContent } }),
     );
   }
   sheet.reset(initial);

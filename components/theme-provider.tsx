@@ -1,9 +1,9 @@
 import {
+  createContext,
   h,
-  useState,
   IS_BROWSER,
   useEffect,
-  createContext,
+  useState,
   VNode,
 } from "../deps.ts";
 
@@ -14,12 +14,12 @@ export const ThemeContext = createContext<{
 
 export const ThemeProvider = ({ children }: { children: VNode }) => {
   const [theme, setTheme] = useState<string>(
-    IS_BROWSER ? (localStorage.getItem("theme") as string) : ""
+    IS_BROWSER ? (localStorage.getItem("theme") as string) : "",
   );
 
   const changeTheme = (
     newTheme: string,
-    oldTheme: string | undefined = "light"
+    oldTheme: string | undefined = "light",
   ) => {
     document.documentElement.classList.remove(oldTheme);
     document.documentElement.classList.add(newTheme);

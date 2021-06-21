@@ -26,6 +26,6 @@ export const STATIC_URL =
   "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static";
 declare namespace JSX {
   interface IntrinsicElements {
-    [keyName: string]: any;
+    [keyName: string]: unknown;
   }
 }

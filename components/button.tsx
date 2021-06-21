@@ -1,8 +1,8 @@
-import { h, tw } from "../deps.ts";
+import { h, tw, VNode } from "../deps.ts";
 
 type ButtonProps = {
-  children?: any;
-  onClick?: () => any;
+  children?: VNode;
+  onClick?: () => void;
   className?: string;
 };
 

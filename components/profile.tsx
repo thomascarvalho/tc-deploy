@@ -1,17 +1,15 @@
-import { h, VNode, Fragment, tw, STATIC_URL } from "../deps.ts";
+import { Fragment, h, STATIC_URL, tw, VNode } from "../deps.ts";
 
 import { ToggleTheme } from "./toggle-theme.tsx";
 import {
-  Youtube,
-  Twitter,
   Github,
-  Twitch,
+  Linkedin,
   Location,
   Package,
-  Linkedin,
+  Twitch,
+  Twitter,
+  Youtube,
 } from "./icons.tsx";
-
-import { buttonStyledClassName } from "./button.tsx";
 
 const SocialLink = ({
   icon,
@@ -33,11 +31,13 @@ export const Profile = () => {
   return (
     <Fragment>
       <div
-        className={tw`w-full rounded-lg flex flex-row shadow-2xl bg-white opacity-75 mx-6 lg:mx-0`}
+        className={tw
+          `w-full rounded-lg flex flex-row shadow-2xl bg-white opacity-75 mx-6 lg:mx-0`}
       >
         <div className={tw`p-12 text-center flex-grow lg:text-left`}>
           <div
-            className={tw`block lg:hidden rounded-full shadow-xl mx-auto h-48 w-48 bg-cover bg-center`}
+            className={tw
+              `block lg:hidden rounded-full shadow-xl mx-auto h-48 w-48 bg-cover bg-center`}
             style={`background-image: url('${STATIC_URL}/avatar.jpg')`}
           >
             <div className={tw`absolute right-12 h-6 w-6`}>
@@ -49,16 +49,20 @@ export const Profile = () => {
             Thomas Carvalho
           </h1>
           <div
-            className={tw`mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-yellow-300 dark:border-gray-600 opacity-25`}
-          ></div>
+            className={tw
+              `mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-yellow-300 dark:border-gray-600 opacity-25`}
+          >
+          </div>
           <p
-            className={tw`pt-4 text-base font-bold flex items-center justify-center lg:justify-start`}
+            className={tw
+              `pt-4 text-base font-bold flex items-center justify-center lg:justify-start`}
           >
             <Package className="h-4 mr-4" />
             Développeur Full-Stack
           </p>
           <p
-            className={tw`pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start`}
+            className={tw
+              `pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start`}
           >
             <Location className="h-4 mr-4" />
             <a
@@ -73,14 +77,9 @@ export const Profile = () => {
             Développeur curieux, passionné et agile.
           </p>
 
-          {/* <div className={tw`pt-12 pb-8`}>
-          <a href="/blog" className={tw`${buttonStyledClassName}`}>
-            Blog
-          </a>
-        </div> */}
-
           <div
-            className={tw`mt-6 pb-4 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-center`}
+            className={tw
+              `mt-6 pb-4 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-center`}
           >
             <SocialLink
               href="https://twitter.com/dikalikatao"
@@ -109,14 +108,16 @@ export const Profile = () => {
           className={tw`hidden w-full h-auto lg:flex flex-col lg:w-2/5 pt-6`}
         >
           <div
-            className={tw`flex-grow flex justify-end items-center h-8 mr-8 mb-4`}
+            className={tw
+              `flex-grow flex justify-end items-center h-8 mr-8 mb-4`}
           >
             <ToggleTheme />
           </div>
           <div className={tw`flex justify-end`}>
             <img
               src={`${STATIC_URL}/avatar.jpg`}
-              className={tw`rounded-none hidden lg:rounded-tl-lg lg:rounded-br-lg shadow-2xl lg:block`}
+              className={tw
+                `rounded-none hidden lg:rounded-tl-lg lg:rounded-br-lg shadow-2xl lg:block`}
             />
           </div>
         </div>
