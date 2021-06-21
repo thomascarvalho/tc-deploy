@@ -23,7 +23,7 @@ const SocialLink = ({
   last?: boolean;
 }) => {
   return (
-    <a href={href} class={`${!last ? "mr-4 lg:mr-6" : ""}`}>
+    <a href={href} className={tw`${!last ? "mr-4 lg:mr-6" : ""}`}>
       {icon}
     </a>
   );
@@ -39,7 +39,11 @@ export const Profile = () => {
           <div
             className={tw`block lg:hidden rounded-full shadow-xl mx-auto h-48 w-48 bg-cover bg-center`}
             style={`background-image: url('${STATIC_URL}/avatar.jpg')`}
-          ></div>
+          >
+            <div className={tw`absolute right-12 h-6 w-6`}>
+              <ToggleTheme />
+            </div>
+          </div>
 
           <h1 className={tw`text-3xl font-bold pt-8 lg:pt-0`}>
             Thomas Carvalho
