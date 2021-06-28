@@ -2,7 +2,7 @@ export * from "https://raw.githubusercontent.com/lucacasonato/fresh/main/runtime
 import { IS_BROWSER } from "https://raw.githubusercontent.com/lucacasonato/fresh/main/runtime.ts";
 import { setup, tw } from "https://esm.sh/twind";
 export { setup, tw };
-
+export { Router } from "https://esm.sh/preact-router?dts";
 if (IS_BROWSER) {
   setup({
     preflight: true,

@@ -3,5 +3,9 @@
   "deno.lint": true,
   "deno.unstable": true,
   "deno.config": "./tsconfig.json",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "deno.suggest.imports.hosts": {
+    "https://esm.sh": false,
+    "https://headlessui": false
+  }
 }

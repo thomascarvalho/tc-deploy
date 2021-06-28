@@ -6,6 +6,7 @@ import * as $0 from "./pages/api/joke.ts";
 import * as $1 from "./pages/_render.ts";
 import * as $2 from "./pages/notfound.tsx";
 import * as $3 from "./pages/index.tsx";
+import * as $4 from "./pages/blog.tsx";
 
 const routes = {
   pages: {
@@ -13,6 +14,7 @@ const routes = {
     "./pages/_render.ts": $1,
     "./pages/notfound.tsx": $2,
     "./pages/index.tsx": $3,
+    "./pages/blog.tsx": $4,
   },
   baseUrl: import.meta.url,
 };

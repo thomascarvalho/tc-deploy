@@ -4,7 +4,7 @@ import { Profile } from "../components/profile.tsx";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout isCentered>
       <Profile />
     </Layout>
   );
