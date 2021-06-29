@@ -22,7 +22,7 @@ if (IS_BROWSER) {
   });
 }
 
-export const STATIC_URL = "http://0.0.0.0:8080/api/static";
+export const STATIC_URL = "/api/static";
 declare namespace JSX {
   interface IntrinsicElements {
     [keyName: string]: unknown;
