@@ -9,7 +9,8 @@ export const Card = ({
 }) => {
   return (
     <div
-      className={tw`w-full rounded-lg flex flex-row shadow-2xl bg-white mx-6 lg:mx-0 ${className}`}
+      className={tw
+        `w-full rounded-lg flex flex-row shadow-2xl bg-white mx-6 lg:mx-0 ${className}`}
     >
       {children}
     </div>

@@ -1,4 +1,4 @@
-import { h, tw, VNode, STATIC_URL } from "../deps.ts";
+import { h, STATIC_URL, tw, VNode } from "../deps.ts";
 import { useDisclosure } from "../hooks/use-disclosure.tsx";
 import { ToggleTheme } from "./toggle-theme.tsx";
 import { buttonStyledClassName } from "./button.tsx";
@@ -32,7 +32,8 @@ export const Navbar = ({ className = "" }: NavbarProps) => {
   return (
     <nav className={tw`w-full px-2 sm:px-6 lg:px-0`}>
       <div className={tw`relative flex items-center justify-between h-16`}>
-        {/* <div
+        {
+          /* <div
           className={tw`absolute inset-y-0 left-0 flex items-center sm:hidden`}
         >
           <button
@@ -42,12 +43,15 @@ export const Navbar = ({ className = "" }: NavbarProps) => {
             <span className={tw`sr-only`}>Open main menu</span>
             {isMenuOpen ? <span>fermer</span> : <span>ouvrir</span>}
           </button>
-        </div> */}
+        </div> */
+        }
         <div
-          className={tw`flex-1 flex items-center justify-center sm:justify-start`}
+          className={tw
+            `flex-1 flex items-center justify-center sm:justify-start`}
         >
           <a
-            className={tw`flex-shrink-0 flex items-center text-md ${buttonStyledClassName} bg-transparent dark:bg-transparent`}
+            className={tw
+              `flex-shrink-0 flex items-center text-md ${buttonStyledClassName} bg-transparent dark:bg-transparent`}
             href="/"
           >
             <img
@@ -66,7 +70,8 @@ export const Navbar = ({ className = "" }: NavbarProps) => {
           </div>
         </div>
         <div
-          className={tw`absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0`}
+          className={tw
+            `absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0`}
         >
           <div className={tw`p-1`}>
             <span className={tw`sr-only`}>Toggle theme</span>

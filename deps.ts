@@ -22,8 +22,7 @@ if (IS_BROWSER) {
   });
 }
 
-export const STATIC_URL =
-  "https://raw.githubusercontent.com/thomascarvalho/tc-deploy/main/static";
+export const STATIC_URL = "http://0.0.0.0:8080/api/static";
 declare namespace JSX {
   interface IntrinsicElements {
     [keyName: string]: unknown;
